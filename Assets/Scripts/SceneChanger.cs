@@ -18,7 +18,7 @@ public class SceneChanger : MonoBehaviour
         if (plyr.gameObject.tag == "Player")
         {
             enterText.SetActive(true);
-            if (Input.GetButtonDown("Use"))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 SceneManager.LoadScene(sceneToLoad);
             }

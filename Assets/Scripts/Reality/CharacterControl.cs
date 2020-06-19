@@ -1,21 +1,24 @@
 ﻿
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UIElements;
 
 public class CharacterControl : MonoBehaviour
 {
 
-    private Animator anim;
     public float speed;
+    public int length;
     private float moveInput;
     private Rigidbody2D rb;
-    private bool facingRight = true;
+    private bool facingRight = true, dialogFlag = false;
+    private ShowDialog dlgObj;
+    private int i = 0;
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -24,6 +27,23 @@ public class CharacterControl : MonoBehaviour
     {
         moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput*speed, rb.velocity.y);
+        if (dialogFlag)
+        {
+            if (i < length)
+            {
+                dlgObj.dialogField.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y + 3.4f, 0);
+                dlgObj.text.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y + 3.4f, 0);
+                i++;
+            }
+            else
+            {
+                dlgObj.dialogField.SetActive(false);
+                dlgObj.text.SetActive(false);
+                i = 0;
+                dialogFlag = false;
+                dlgObj.flag = false;
+            }
+        }
         if (!facingRight && moveInput > 0)
         {
             Flip();
@@ -43,26 +63,12 @@ public class CharacterControl : MonoBehaviour
         theScale.x *= -1;
         transform.localScale = theScale;
     }
-    //Animator anim;
-    //float dirX, moveSpeed;
-    //private bool m_FacingRight = true;  // For determining which way the player is currently facing.
-
-
-
-    //// Start is called before the first frame update
-    //void Start(){
-    //    anim = GetComponent<Animator>();
-    //    moveSpeed = 5f;
-    //}
-
-    //// Update is called once per frame
-    //void Update(){
-    //    dirX = Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime;
-    //    transform.position = new Vector2(transform.position.x + dirX, transform.position.y);
-    //    if (dirX != 0)
-    //        anim.setBool("isWalking", true);
-    //    else
-    //        anim.setBool("isWalking", false);
-    //}
-
+    public void ShowDialogOnCharacter(string tag)
+    {
+        GameObject obj = GameObject.FindGameObjectWithTag(tag);
+        dlgObj = obj.GetComponent<ShowDialog>();
+        dlgObj.dialogField.SetActive(true);
+        dlgObj.text.SetActive(true);
+        dialogFlag = true;
+    }
 }
