@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class CharacterController2D : MonoBehaviour
 {
@@ -144,4 +145,14 @@ public class CharacterController2D : MonoBehaviour
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
+
+    //перезагрузка сцены при попадании на врага
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "DeathByEnemy" || other.tag =="Opossum")
+        {
+			SceneManager.LoadScene(1);
+        }
+    }
+
 }
