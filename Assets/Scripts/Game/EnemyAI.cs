@@ -82,5 +82,17 @@ public class EnemyAI : MonoBehaviour
             enemyGFX.localScale = new Vector3(1f, 1f, 1f) *4;
         }
     }
+
+  /*  private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Plauer")
+        {
+            GameObject tr = GameObject.Find("trig");
+            Transform popavsia = tr.GetComponent<Transform>();
+            target = popavsia;
+        }
+
+    }*/
+
 }
 

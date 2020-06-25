@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyHelthAndDie : MonoBehaviour
 {
     public int maxHelth = 100;
-    public Collider2D bodyEnemy;
     int currentHelth;
 
     void Start()
