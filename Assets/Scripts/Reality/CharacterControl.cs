@@ -65,10 +65,16 @@ public class CharacterControl : MonoBehaviour
     }
     public void ShowDialogOnCharacter(string tag)
     {
+        if (dialogFlag)
+        {
+            dlgObj.dialogField.SetActive(false);
+            dlgObj.text.SetActive(false);
+            i = 0;
+        }
         GameObject obj = GameObject.FindGameObjectWithTag(tag);
         dlgObj = obj.GetComponent<ShowDialog>();
-        dlgObj.dialogField.SetActive(true);
+         dlgObj.dialogField.SetActive(true);
         dlgObj.text.SetActive(true);
-        dialogFlag = true;
+         dialogFlag = true;
     }
 }
