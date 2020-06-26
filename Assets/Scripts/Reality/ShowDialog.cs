@@ -40,16 +40,6 @@ public class ShowDialog : MonoBehaviour
         //          text.transform.position = new Vector3(Character.transform.position.x + 1.5f, Character.transform.position.y + 3.4f, 0);
         //}
     }
-    IEnumerator ShowAndHide()
-    {
-        dialogField.SetActive(true);
-        text.SetActive(true);
-        dialogField.transform.position = new Vector3(Character.transform.position.x + 1.5f, Character.transform.position.y + 3.4f, 0);
-        text.transform.position = new Vector3(Character.transform.position.x + 1.5f, Character.transform.position.y + 3.4f, 0);
-        yield return new WaitForSeconds(sec);
-        dialogField.SetActive(false);
-        text.SetActive(false);
-    }
     private void OnTriggerExit2D(Collider2D collision)
     {
         hint.SetActive(false);

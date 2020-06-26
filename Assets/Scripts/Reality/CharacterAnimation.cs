@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterAnimation : MonoBehaviour
 {
-    private Animator anim;
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,9 +14,12 @@ public class CharacterAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
-            anim.SetBool("isWalking", true);
-        else
-            anim.SetBool("isWalking", false);
+        if (!this.GetComponent<CharacterControl>().isInDialog)
+        {
+            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+                anim.SetBool("isWalking", true);
+            else
+                anim.SetBool("isWalking", false);
+        }
     }
 }

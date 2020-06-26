@@ -13,9 +13,11 @@ public class CharacterControl : MonoBehaviour
     public int length;
     private float moveInput;
     private Rigidbody2D rb;
-    private bool facingRight = true, dialogFlag = false;
+    public bool facingRight = true; 
+    private bool dialogFlag = false;
     private ShowDialog dlgObj;
     private int i = 0;
+    public bool isInDialog = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,35 +27,38 @@ public class CharacterControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(moveInput*speed, rb.velocity.y);
-        if (dialogFlag)
+        if (!isInDialog)
         {
-            if (i < length)
+            moveInput = Input.GetAxis("Horizontal");
+            rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+            if (dialogFlag)
             {
-                dlgObj.dialogField.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y + 3.4f, 0);
-                dlgObj.text.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y + 3.4f, 0);
-                i++;
+                if (i < length)
+                {
+                    dlgObj.dialogField.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y + 3.4f, 0);
+                    dlgObj.text.transform.position = new Vector3(this.transform.position.x + 1.5f, this.transform.position.y + 3.4f, 0);
+                    i++;
+                }
+                else
+                {
+                    dlgObj.dialogField.SetActive(false);
+                    dlgObj.text.SetActive(false);
+                    i = 0;
+                    dialogFlag = false;
+                    dlgObj.flag = false;
+                }
             }
-            else
+            if (!facingRight && moveInput > 0)
             {
-                dlgObj.dialogField.SetActive(false);
-                dlgObj.text.SetActive(false);
-                i = 0;
-                dialogFlag = false;
-                dlgObj.flag = false;
+                Flip();
             }
-        }
-        if (!facingRight && moveInput > 0)
-        {
-            Flip();
-        }
-        else if (facingRight && moveInput < 0)
-        {
-            Flip();
+            else if (facingRight && moveInput < 0)
+            {
+                Flip();
+            }
         }
     }
-    private void Flip()
+    public void Flip()
     {
         // Switch the way the player is labelled as facing.
         facingRight = !facingRight;
