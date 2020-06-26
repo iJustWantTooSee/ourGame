@@ -12,7 +12,7 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private Transform m_GroundCheck;                           // A position marking where to check if the player is grounded.
 	[SerializeField] private Transform m_CeilingCheck;                          // A position marking where to check for ceilings
 	[SerializeField] private Collider2D m_CrouchDisableCollider;                // A collider that will be disabled when crouching
-
+	public int NumberScence;
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
 	const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
@@ -27,6 +27,7 @@ public class CharacterController2D : MonoBehaviour
 
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
+
 
 	public BoolEvent OnCrouchEvent;
 	private bool m_wasCrouching = false;
@@ -152,7 +153,7 @@ public class CharacterController2D : MonoBehaviour
     {
         if (other.tag == "DeathByEnemy" || other.tag =="Opossum")
         {
-			SceneManager.LoadScene(1);
+			SceneManager.LoadScene(NumberScence);
         }
 			
     }
