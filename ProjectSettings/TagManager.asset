@@ -6,6 +6,10 @@ TagManager:
   tags:
   - LivingRoom
   - ExitDoor
+  - DeathByEnemy
+  - Death
+  - Fit
+  - NewLVL
   layers:
   - Default
   - TransparentFX
@@ -19,7 +23,7 @@ TagManager:
   - Kostil
   - Enemy
   - Floor
-  - 
+  - EnemyTravka
   - 
   - 
   - 

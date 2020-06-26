@@ -10,5 +10,8 @@ EditorBuildSettings:
     guid: 0d013e88b210a464f839623cee4cf262
   - enabled: 1
     path: Assets/Scenes/gameInGameFirstLVL.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    guid: d45e3871fbe7b1c409df0d92dea39aa2
+  - enabled: 1
+    path: Assets/Scenes/SecondLVL.unity
+    guid: 9ab0bfa4793af6b45bf793cf4f704449
   m_configObjects: {}

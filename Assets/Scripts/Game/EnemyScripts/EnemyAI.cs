@@ -1,6 +1,7 @@
 ﻿using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
@@ -10,6 +11,7 @@ public class EnemyAI : MonoBehaviour
 
     public float speed = 200f;
     public float NextWaypointDistance = 3f;
+    public float borderAttak;
 
     public Transform enemyGFX;
 
@@ -61,26 +63,31 @@ public class EnemyAI : MonoBehaviour
         {
             reacheadEndOfPath = false; 
         }
-        Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 force = direction * speed * Time.deltaTime;
-
-        rb.AddForce(force);
-
-        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
-
-        if (distance < NextWaypointDistance)
+        if (target.position.x > borderAttak)
         {
-            currentWaypoint++;
-        }
 
-        if (force.x >= 0.01f)  //Поворот изображения
-        {
-            enemyGFX.localScale = new Vector3(-1f, 1f, 1f)*4; //применяется к оригинальному размеру, поэтому домнажаем для увеличения
-        }
-        else if (force.x <= -0.01f)
-        {
-            enemyGFX.localScale = new Vector3(1f, 1f, 1f) *4;
+            Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+            Vector2 force = direction * speed * Time.deltaTime;
+
+            rb.AddForce(force);
+
+            float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+
+            if (distance < NextWaypointDistance)
+            {
+                currentWaypoint++;
+            }
+
+            if (force.x >= 0.01f)  //Поворот изображения
+            {
+                enemyGFX.localScale = new Vector3(-1f, 1f, 1f) * 4; //применяется к оригинальному размеру, поэтому домнажаем для увеличения
+            }
+            else if (force.x <= -0.01f)
+            {
+                enemyGFX.localScale = new Vector3(1f, 1f, 1f) * 4;
+            }
         }
     }
+
 }
 

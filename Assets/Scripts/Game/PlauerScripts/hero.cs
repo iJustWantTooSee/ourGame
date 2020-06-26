@@ -8,7 +8,7 @@ public class hero : MonoBehaviour
 {
 	public CharacterController2D controller;
 	public Animator animator;
-
+	public Transform trig;
 	public float runSpeed = 40f;
 
 	float horizontalMove = 0f;
@@ -37,7 +37,7 @@ public class hero : MonoBehaviour
 		{
 			crouch = false;
 		}
-
+	
 	}
 
 	public void OnLanding()
