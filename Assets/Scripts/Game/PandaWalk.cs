@@ -7,6 +7,7 @@ public class PandaWalk : MonoBehaviour
 {
     public float speed = 10f;
     public Transform PandaTransform;
+    public Transform Fox; 
     // Start is called before the first frame update
     void Start()
     {
@@ -16,9 +17,13 @@ public class PandaWalk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PandaTransform.position.x > 2)
+        if (Fox.position.x > 175)
         {
-            transform.Translate(Vector2.left * speed * Time.deltaTime);
+            if (PandaTransform.position.x> 185) 
+            {
+                transform.Translate(Vector2.left * speed * Time.deltaTime);
+            }
+            
         }
     }
 }
