@@ -8,7 +8,7 @@ public class StartDialog : MonoBehaviour
     public GameObject hint;
     public GameObject[] dialogs = new GameObject[10];
     public GameObject[] secDialog = new GameObject[3];
-    private GameObject Character;
+    private GameObject Character, table;
     private bool flag = false, dialogEnded = false, mainEnded = false;
     private Animator anim;
     private int i = 0;
@@ -17,6 +17,7 @@ public class StartDialog : MonoBehaviour
     void Start()
     {
         Character = GameObject.FindGameObjectWithTag("Player");
+        table = GameObject.FindGameObjectWithTag("EnterGame");
         for (int j = 0; j < n; j++)
         {
             if (j<3)
@@ -47,6 +48,7 @@ public class StartDialog : MonoBehaviour
                         anim.SetBool("isTalking", false);
                         dialogEnded = true;
                         mainEnded = true;
+                        table.GetComponent<StartGame>().startGame = true;
                     }
                 }
                 else
@@ -62,6 +64,7 @@ public class StartDialog : MonoBehaviour
                         Character.GetComponent<CharacterControl>().isInDialog = false;
                         anim.SetBool("isTalking", false);
                         dialogEnded = true;
+                        table.GetComponent<StartGame>().startGame = true;
                     }
                 }
             }

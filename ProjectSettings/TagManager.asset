@@ -10,6 +10,8 @@ TagManager:
   - Death
   - Fit
   - NewLVL
+  - EnterGame
+  - PauseMenu
   layers:
   - Default
   - TransparentFX
