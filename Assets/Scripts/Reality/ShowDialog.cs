@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ShowDialog : MonoBehaviour
 {
-    public GameObject text;
+    private int i;
+    public int length;
     public GameObject dialogField;
     public GameObject hint;
     private GameObject Character;
-    public float sec;
-    public bool flag = false;
+    public bool dialogFlag = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,34 +17,50 @@ public class ShowDialog : MonoBehaviour
         dialogField.SetActive(false);
         hint.SetActive(false);
         //       text.SetActive(false);
-        flag = false;
+        dialogFlag = false;
+    }
+    void Update()
+    {
+        if (dialogFlag)
+        {
+            if (i < length)
+            {
+                dialogField.transform.position = new Vector3(Character.transform.position.x + 1.5f, Character.transform.position.y + 3.4f, 0);
+                i++;
+            }
+            else
+            {
+                dialogField.SetActive(false);
+                i = 0;
+                dialogFlag = false;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        hint.SetActive(true);
+        if (collision.gameObject.tag == "Player")
+        {
+            hint.SetActive(true);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.E) && !flag)
+        if (collision.gameObject.tag == "Player")
         {
-            flag = true;
-            Character.GetComponent<CharacterControl>().ShowDialogOnCharacter(this.tag);
+            if (Input.GetKeyDown(KeyCode.E) && !dialogFlag)
+            {
+                dialogFlag = true;
+                dialogField.SetActive(true);
+            }
         }
-        //if (flag) 
-        //{
-        //   StartCoroutine(ShowAndHide(dialogField));
-        //dialogField.transform.position = new Vector3(Character.transform.position.x+1.5f, Character.transform.position.y+3.4f,0);
-        //text.transform.position = new Vector3(Character.transform.position.x + x, Character.transform.position.y + y, Character.transform.position.z+z);
-        //          text.transform.position = new Vector3(Character.transform.position.x + 1.5f, Character.transform.position.y + 3.4f, 0);
-        //}
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        hint.SetActive(false);
-        //     dialogField.SetActive(false);
-        //      text.SetActive(false);
-        flag = false;
+        if (collision.gameObject.tag == "Player")
+        {
+            hint.SetActive(false);
+        }
     }
 }
