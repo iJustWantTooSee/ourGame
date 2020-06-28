@@ -6,7 +6,7 @@ public class PlauerCombat : MonoBehaviour
 {
 
     public Animator animator;
-
+    public AudioSource HitSound;
     public Transform attakPoint;
 
     public LayerMask enemyLauers;
@@ -34,7 +34,7 @@ public class PlauerCombat : MonoBehaviour
     void Attak()
     {
         animator.SetTrigger("Attak");
-
+        HitSound.Play();
 
         Collider2D[] hitEnemis = Physics2D.OverlapCircleAll(attakPoint.position,attakRange, enemyLauers);
 
