@@ -26,4 +26,5 @@ public class EnemyHelthAndDie : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
 }
