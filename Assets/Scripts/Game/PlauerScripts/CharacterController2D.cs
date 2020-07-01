@@ -155,6 +155,7 @@ public class CharacterController2D : MonoBehaviour
 		{
 			if (m_Rigidbody2D.velocity.y< 0f)
             {
+				m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce*1.6f)); //если что-то сломается, то удалить эту строчку
 				Destroy(other.gameObject);
             }
             else
