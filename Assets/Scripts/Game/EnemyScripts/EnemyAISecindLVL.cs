@@ -7,11 +7,11 @@ using UnityEngine;
 public class EnemyAISecindLVL : MonoBehaviour
 {
     public Transform target;
+    public Transform randeAttak; 
 
     public float speed = 200f;
     public float NextWaypointDistance = 3f;
-    public float borderAttakX;
-    public float borderAttakY;
+    bool attak = false;
 
     public Transform enemyGFX;
 
@@ -63,7 +63,7 @@ public class EnemyAISecindLVL : MonoBehaviour
         {
             reacheadEndOfPath = false;
         }
-        if (target.position.x > borderAttakX && target.position.y >borderAttakY)
+        if (attak)
         {
 
             Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
@@ -86,6 +86,15 @@ public class EnemyAISecindLVL : MonoBehaviour
             {
                 enemyGFX.localScale = new Vector3(1f, 1f, 1f) * 4;
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            attak = true;
+            randeAttak.GetComponent<CircleCollider2D>().enabled = false;
         }
     }
 }

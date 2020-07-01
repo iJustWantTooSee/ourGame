@@ -132,6 +132,8 @@ GameObject:
   - component: {fileID: 7423547}
   - component: {fileID: 7423549}
   - component: {fileID: 7423548}
+  - component: {fileID: 7423551}
+  - component: {fileID: 7423550}
   m_Layer: 12
   m_Name: spines
   m_TagString: Spines
@@ -166,7 +168,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0073685795, y: -0.108716846}
+  m_Offset: {x: 0.038681872, y: -0.13813245}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -177,7 +179,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.58351755, y: 0.18256629}
+  m_Size: {x: 0.5360728, y: 0.12373507}
   m_EdgeRadius: 0
 --- !u!212 &7423549
 SpriteRenderer:
@@ -229,6 +231,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &7423550
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7423546}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.1679541, y: -0.061677847}
+  serializedVersion: 2
+  m_Radius: 0.12036893
+--- !u!58 &7423551
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7423546}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.18028812, y: -0.11291787}
+  serializedVersion: 2
+  m_Radius: 0.11562439
 --- !u!1 &21298609
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,7 +580,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 15
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -1048,7 +1082,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -1246,7 +1280,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 15
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -1773,7 +1807,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 15
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -2452,7 +2486,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -2756,7 +2790,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -2992,7 +3026,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 15
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -3240,7 +3274,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 15
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -3987,7 +4021,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.09008, y: 3.5045733, z: -15}
+  m_LocalPosition: {x: 3.9203873, y: 1.7997627, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 21298614}
@@ -4842,7 +4876,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -5014,9 +5048,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.21937321, y: -0.069360964}
+  m_Offset: {x: 0.2126395, y: -0.069360964}
   serializedVersion: 2
-  m_Radius: 0.108689085
+  m_Radius: 0.10195538
 --- !u!58 &713818582
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5046,7 +5080,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.02709902, y: -0.08065223}
+  m_Offset: {x: 0.027099013, y: -0.093879305}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5057,7 +5091,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.41352296, y: 0.23869552}
+  m_Size: {x: 0.41352296, y: 0.21224137}
   m_EdgeRadius: 0
 --- !u!1 &749595909
 GameObject:
@@ -5230,7 +5264,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 15
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -5843,7 +5877,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -6308,7 +6342,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -7682,7 +7716,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 15
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -7889,7 +7923,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 15
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -8783,7 +8817,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 15
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -9361,7 +9395,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 15
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -9821,7 +9855,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 15
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -10294,7 +10328,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -10728,7 +10762,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 15
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -11312,7 +11346,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 15
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -12196,7 +12230,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -12613,12 +12647,12 @@ PrefabInstance:
     - target: {fileID: 3113481306506822296, guid: 67497ca4b13b08a42a16a488d653e8d1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 34.09
+      value: -4.160001
       objectReference: {fileID: 0}
     - target: {fileID: 3113481306506822296, guid: 67497ca4b13b08a42a16a488d653e8d1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.2999997
+      value: -0.40000015
       objectReference: {fileID: 0}
     - target: {fileID: 3113481306506822296, guid: 67497ca4b13b08a42a16a488d653e8d1,
         type: 3}
@@ -12694,15 +12728,30 @@ PrefabInstance:
       propertyPath: HitSound
       value: 
       objectReference: {fileID: 671726978}
+    - target: {fileID: 5820167390670396421, guid: f3eb4751fb2e60147adabfc229fa7440,
+        type: 3}
+      propertyPath: enemyLauers.m_Bits
+      value: 9216
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820167390670396425, guid: f3eb4751fb2e60147adabfc229fa7440,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.008141838
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820167390670396425, guid: f3eb4751fb2e60147adabfc229fa7440,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.30951768
+      objectReference: {fileID: 0}
     - target: {fileID: 5820167390670396426, guid: f3eb4751fb2e60147adabfc229fa7440,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.95
+      value: -5.3
       objectReference: {fileID: 0}
     - target: {fileID: 5820167390670396426, guid: f3eb4751fb2e60147adabfc229fa7440,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 5820167390670396426, guid: f3eb4751fb2e60147adabfc229fa7440,
         type: 3}
@@ -12768,6 +12817,16 @@ PrefabInstance:
         type: 3}
       propertyPath: NumberScence
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820167390670396430, guid: f3eb4751fb2e60147adabfc229fa7440,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.007032773
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820167390670396430, guid: f3eb4751fb2e60147adabfc229fa7440,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.1854206
       objectReference: {fileID: 0}
     - target: {fileID: 5820167390670396434, guid: f3eb4751fb2e60147adabfc229fa7440,
         type: 3}
