@@ -151,11 +151,23 @@ public class CharacterController2D : MonoBehaviour
     //перезагрузка сцены при попадании на врага
     private void OnTriggerEnter2D(Collider2D other)
     {
-		if (other.tag == "DeathByEnemy" || other.tag == "Opossum")
+		if (other.tag == "DeathByEnemy")
+		{
+			if (m_Rigidbody2D.velocity.y< 0f)
+            {
+				Destroy(other.gameObject);
+            }
+            else
+            {
+				SceneManager.LoadScene(NumberScence);
+			}
+			
+		}
+		if (other.tag == "Spines")
 		{
 			SceneManager.LoadScene(NumberScence);
 		}
-			
-    }
+
+	}
 
 }
