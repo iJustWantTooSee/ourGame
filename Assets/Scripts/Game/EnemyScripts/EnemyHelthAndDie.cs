@@ -6,10 +6,12 @@ public class EnemyHelthAndDie : MonoBehaviour
 {
     public int maxHelth = 100;
     int currentHelth;
+    private UnityEngine.Object explocion;
 
     void Start()
     {
-        currentHelth = maxHelth;   
+        currentHelth = maxHelth;
+        explocion = Resources.Load("Explosion");
     }
 
     public void TakeDamage(int damage)
@@ -24,6 +26,9 @@ public class EnemyHelthAndDie : MonoBehaviour
 
     private void Die()
     {
+        GameObject explocionEnemy = (GameObject)Instantiate(explocion);
+        explocionEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+
         Destroy(gameObject);
     }
 
