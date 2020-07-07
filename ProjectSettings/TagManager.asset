@@ -15,6 +15,7 @@ TagManager:
   - Spines
   - MyxaDeath
   - ej
+  - BossEj
   layers:
   - Default
   - TransparentFX

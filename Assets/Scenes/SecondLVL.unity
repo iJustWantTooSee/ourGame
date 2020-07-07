@@ -190,7 +190,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 680639}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.161725, y: 2.5211308, z: -15}
+  m_LocalPosition: {x: 1.1617241, y: 2.5211306, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -495,7 +495,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -41.225487, y: 23.06175}
+  m_Offset: {x: -40.79963, y: 23.06175}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -506,7 +506,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.619232, y: 1.4081688}
+  m_Size: {x: 9.470947, y: 1.4081688}
   m_EdgeRadius: 0
 --- !u!4 &67835353 stripped
 Transform:
@@ -1583,7 +1583,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &346548635
 Transform:
   m_ObjectHideFlags: 0
@@ -4498,7 +4498,7 @@ PrefabInstance:
     - target: {fileID: 5820167390670396421, guid: f3eb4751fb2e60147adabfc229fa7440,
         type: 3}
       propertyPath: enemyLauers.m_Bits
-      value: 9216
+      value: 25600
       objectReference: {fileID: 0}
     - target: {fileID: 5820167390670396421, guid: f3eb4751fb2e60147adabfc229fa7440,
         type: 3}
@@ -4533,12 +4533,12 @@ PrefabInstance:
     - target: {fileID: 5820167390670396426, guid: f3eb4751fb2e60147adabfc229fa7440,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.7
+      value: -9.9
       objectReference: {fileID: 0}
     - target: {fileID: 5820167390670396426, guid: f3eb4751fb2e60147adabfc229fa7440,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.6
+      value: -2.8
       objectReference: {fileID: 0}
     - target: {fileID: 5820167390670396426, guid: f3eb4751fb2e60147adabfc229fa7440,
         type: 3}
@@ -8759,6 +8759,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: opossum-1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2704068125654456824, guid: 25de23c443a7d764bbb97eba2f3823fc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 2704068125654456829, guid: 25de23c443a7d764bbb97eba2f3823fc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10061,6 +10066,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: opossum-2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2704068125654456824, guid: 25de23c443a7d764bbb97eba2f3823fc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2704068125654456829, guid: 25de23c443a7d764bbb97eba2f3823fc,
         type: 3}
@@ -13847,12 +13857,12 @@ PrefabInstance:
     - target: {fileID: 3113481306506822296, guid: 67497ca4b13b08a42a16a488d653e8d1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.5600004
+      value: -8.76
       objectReference: {fileID: 0}
     - target: {fileID: 3113481306506822296, guid: 67497ca4b13b08a42a16a488d653e8d1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6000001
+      value: -1.8000002
       objectReference: {fileID: 0}
     - target: {fileID: 3113481306506822296, guid: 67497ca4b13b08a42a16a488d653e8d1,
         type: 3}
