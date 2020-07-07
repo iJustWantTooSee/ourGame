@@ -14,7 +14,7 @@ TagManager:
   - PauseMenu
   - Spines
   - MyxaDeath
-  - Mother
+  - ej
   layers:
   - Default
   - TransparentFX
@@ -30,7 +30,7 @@ TagManager:
   - Floor
   - EnemyTravka
   - OpossumEnemy
-  - 
+  - ejaj
   - 
   - 
   - 

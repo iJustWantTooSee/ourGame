@@ -114,7 +114,6 @@ GameObject:
   - component: {fileID: 3084245514153340324}
   - component: {fileID: 3084245514153340323}
   - component: {fileID: 3084245514153340322}
-  - component: {fileID: 3084245514153340327}
   m_Layer: 10
   m_Name: Enemy (1)
   m_TagString: DeathByEnemy
@@ -219,16 +218,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3084245514153340327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3084245514153340321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 211e291f70c41564c8cad0b9261c31f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHelth: 100

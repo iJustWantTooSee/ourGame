@@ -20,7 +20,8 @@ public class CharacterController2D : MonoBehaviour
 	private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
-
+	private UnityEngine.Object explocionHero; // для анимации смерти
+	private UnityEngine.Object explocion; // для анимации смерти
 	[Header("Events")]
 	[Space]
 
@@ -37,6 +38,9 @@ public class CharacterController2D : MonoBehaviour
 
 	private void Awake()
 	{
+		explocion = Resources.Load("Explosion");  // Если что удалить это 
+		explocionHero = Resources.Load("HeroExplosion");
+
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
 		if (OnLandEvent == null)
@@ -152,6 +156,10 @@ public class CharacterController2D : MonoBehaviour
 		transform.localScale = theScale;
 	}
 
+	private void ReloadScence()
+    {
+		SceneManager.LoadScene(NumberScence);
+	}
     //перезагрузка сцены при попадании на врага
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -163,19 +171,39 @@ public class CharacterController2D : MonoBehaviour
 				{ 
 					m_Rigidbody2D.AddForce(new Vector2(0f, jumpHit)); //если что-то сломается, то удалить эту строчку
 					cheakHitJump = true;
-				} 
+				}
+
+				GameObject explocionEnemy = (GameObject)Instantiate(explocion);
+				explocionEnemy.transform.position = new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z);
+
 				Destroy(other.gameObject);
             }
             else
             {
-				SceneManager.LoadScene(NumberScence);
+				GameObject explocionPlayer = (GameObject)Instantiate(explocionHero);
+				explocionPlayer.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+
+				gameObject.GetComponent<Collider2D>().enabled = false;
+				gameObject.GetComponent<Renderer>().enabled = false;
+			
+
+				Invoke("ReloadScence", 0.5f);
 			}
 			
 		}
-		if (other.tag == "Spines"|| other.tag == "MyxaDeath")
+		if (other.tag == "Spines"|| other.tag == "MyxaDeath" || other.tag == "ej")
 		{
-			SceneManager.LoadScene(NumberScence);
+			GameObject explocionPlayer = (GameObject)Instantiate(explocionHero);
+			explocionPlayer.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+
+			gameObject.GetComponent<Collider2D>().enabled = false;
+			gameObject.GetComponent<Renderer>().enabled = false;
+
+			Invoke("ReloadScence", 0.5f);
+
 		}
+
+
 
 	}
 

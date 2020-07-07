@@ -6,10 +6,12 @@ public class EnemyHelthAndDie : MonoBehaviour
 {
     public int maxHelth = 100;
     int currentHelth;
+    private UnityEngine.Object explocion;
 
     void Start()
     {
-        currentHelth = maxHelth;   
+        currentHelth = maxHelth;
+        explocion = Resources.Load("Explosion");
     }
 
     public void TakeDamage(int damage)
@@ -20,10 +22,20 @@ public class EnemyHelthAndDie : MonoBehaviour
         {
             Die();
         }
+        else
+        {
+            GameObject explocionEnemy = (GameObject)Instantiate(explocion);
+            explocionEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            gameObject.GetComponent<Rigidbody2D>().AddForce(transform.right*40f, ForceMode2D.Impulse); 
+        }
     }
 
     private void Die()
     {
+        GameObject explocionEnemy = (GameObject)Instantiate(explocion);
+        explocionEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        explocionEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+
         Destroy(gameObject);
     }
 
