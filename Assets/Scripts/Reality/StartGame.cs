@@ -6,16 +6,16 @@ using UnityEngine.SceneManagement;
 public class StartGame : MonoBehaviour
 {
     private bool dialogFlag = false;
-    public bool startGame = false;
     public int length;
     public GameObject dialogField;
     public GameObject hint;
-    private GameObject Character;
+    private GameObject Character, Player;
     private int i = 0;
 
     private void Start()
     {
-        Character = GameObject.FindGameObjectWithTag("Player");
+        Character = GameObject.FindGameObjectWithTag("Mother");
+        Player = GameObject.FindGameObjectWithTag("Player");
         dialogField.SetActive(false);
         hint.SetActive(false);
     }
@@ -27,7 +27,7 @@ public class StartGame : MonoBehaviour
         {
             if (i < length)
             {
-                dialogField.transform.position = new Vector3(Character.transform.position.x + 1.5f, Character.transform.position.y + 3.4f, 0);
+                dialogField.transform.position = new Vector3(Player.transform.position.x + 1.5f, Player.transform.position.y + 3.4f, 0);
                 i++;
             }
             else
@@ -54,7 +54,7 @@ public class StartGame : MonoBehaviour
             {
                 if (!dialogFlag)
                 {
-                    if (!startGame)
+                    if (!Character.GetComponent<StartDialog>().mainEnded)
                     {
                         dialogFlag = true;
                         dialogField.SetActive(true);
