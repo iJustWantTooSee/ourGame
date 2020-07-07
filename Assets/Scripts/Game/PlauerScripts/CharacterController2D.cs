@@ -191,7 +191,7 @@ public class CharacterController2D : MonoBehaviour
 			}
 			
 		}
-		if (other.tag == "Spines"|| other.tag == "MyxaDeath" || other.tag == "ej")
+		if (other.tag == "Spines"|| other.tag == "MyxaDeath" || other.tag == "ej" || other.tag == "BossEj")
 		{
 			GameObject explocionPlayer = (GameObject)Instantiate(explocionHero);
 			explocionPlayer.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);

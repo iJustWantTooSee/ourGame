@@ -364,7 +364,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 45360582}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 413.74338, y: 122.43646, z: -15}
+  m_LocalPosition: {x: 413.74527, y: 121.332535, z: -15}
   m_LocalScale: {x: 0.9957869, y: 0.9957869, z: 0.9957869}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3621,7 +3621,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 645427317}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 164, y: -9.6, z: 162.73438}
+  m_LocalPosition: {x: 164.3, y: -9.6, z: 162.73438}
   m_LocalScale: {x: 11.479371, y: 11.479371, z: 11.479371}
   m_Children: []
   m_Father: {fileID: 1990084784}
@@ -3639,7 +3639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211e291f70c41564c8cad0b9261c31f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHelth: 200
+  maxHelth: 300
 --- !u!114 &645427320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3875,7 +3875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211e291f70c41564c8cad0b9261c31f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHelth: 200
+  maxHelth: 300
 --- !u!114 &676161203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4866,12 +4866,12 @@ PrefabInstance:
     - target: {fileID: 5820167390670396426, guid: f3eb4751fb2e60147adabfc229fa7440,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 382.3
+      value: 384.6
       objectReference: {fileID: 0}
     - target: {fileID: 5820167390670396426, guid: f3eb4751fb2e60147adabfc229fa7440,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 117
+      value: 115.9
       objectReference: {fileID: 0}
     - target: {fileID: 5820167390670396426, guid: f3eb4751fb2e60147adabfc229fa7440,
         type: 3}
@@ -5967,7 +5967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211e291f70c41564c8cad0b9261c31f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHelth: 200
+  maxHelth: 300
 --- !u!114 &971825496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6408,7 +6408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211e291f70c41564c8cad0b9261c31f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHelth: 200
+  maxHelth: 300
 --- !u!114 &1038834197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8220,12 +8220,12 @@ PrefabInstance:
     - target: {fileID: 3113481306506822296, guid: 67497ca4b13b08a42a16a488d653e8d1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 392.39996
+      value: 394.69998
       objectReference: {fileID: 0}
     - target: {fileID: 3113481306506822296, guid: 67497ca4b13b08a42a16a488d653e8d1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 122.399994
+      value: 121.299995
       objectReference: {fileID: 0}
     - target: {fileID: 3113481306506822296, guid: 67497ca4b13b08a42a16a488d653e8d1,
         type: 3}
@@ -11873,11 +11873,11 @@ GameObject:
   - component: {fileID: 1787978497}
   - component: {fileID: 1787978496}
   - component: {fileID: 1787978495}
-  - component: {fileID: 1787978494}
   - component: {fileID: 1787978493}
+  - component: {fileID: 1787978494}
   m_Layer: 14
-  m_Name: hedgehog (6)
-  m_TagString: ej
+  m_Name: BossEj
+  m_TagString: BossEj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11890,7 +11890,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787978491}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 230.5, y: -4.6, z: 162.73438}
+  m_LocalPosition: {x: 230.5, y: -4.6, z: 148.57}
   m_LocalScale: {x: 31.793184, y: 31.793184, z: 31.793184}
   m_Children: []
   m_Father: {fileID: 1990084784}
@@ -11908,7 +11908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211e291f70c41564c8cad0b9261c31f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHelth: 500
+  maxHelth: 1000
 --- !u!114 &1787978494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11918,7 +11918,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1787978491}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07579a0ea38cab5419bc3b6f08c70933, type: 3}
+  m_Script: {fileID: 11500000, guid: d991df0c782827e48a670eb55834e129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1787978498}
@@ -11953,7 +11953,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 15
+  m_Mass: 3.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -12452,7 +12452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211e291f70c41564c8cad0b9261c31f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHelth: 200
+  maxHelth: 300
 --- !u!1001 &1854966944
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13658,7 +13658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211e291f70c41564c8cad0b9261c31f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHelth: 200
+  maxHelth: 300
 --- !u!114 &2074732908
 MonoBehaviour:
   m_ObjectHideFlags: 0

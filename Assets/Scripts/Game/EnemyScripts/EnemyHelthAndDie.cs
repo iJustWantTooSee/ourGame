@@ -7,36 +7,60 @@ public class EnemyHelthAndDie : MonoBehaviour
     public int maxHelth = 100;
     int currentHelth;
     private UnityEngine.Object explocion;
+    private UnityEngine.Object explocionEj;
 
     void Start()
     {
         currentHelth = maxHelth;
         explocion = Resources.Load("Explosion");
+        explocionEj = Resources.Load("BossEjDeath");
     }
 
     public void TakeDamage(int damage)
     {
         currentHelth -= damage;
 
-        if (currentHelth <= 0 )
+        if (currentHelth <= 0)
         {
             Die();
         }
         else
         {
-            GameObject explocionEnemy = (GameObject)Instantiate(explocion);
-            explocionEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-            gameObject.GetComponent<Rigidbody2D>().AddForce(transform.right*40f, ForceMode2D.Impulse); 
+            if (tag == "BossEj")
+            {
+                GameObject explocionEnemy = (GameObject)Instantiate(explocionEj);
+                explocionEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                gameObject.GetComponent<Rigidbody2D>().AddForce(transform.right * 40f, ForceMode2D.Impulse);
+            }
+            else
+            {
+                GameObject explocionEnemy = (GameObject)Instantiate(explocion);
+                explocionEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                gameObject.GetComponent<Rigidbody2D>().AddForce(transform.right * 40f, ForceMode2D.Impulse);
+            }
+
         }
     }
 
     private void Die()
     {
-        GameObject explocionEnemy = (GameObject)Instantiate(explocion);
-        explocionEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        explocionEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        if (tag == "BossEj")
+        {
+            GameObject explocionEnemy = (GameObject)Instantiate(explocionEj);
+            explocionEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            gameObject.GetComponent<Rigidbody2D>().AddForce(transform.right * 40f, ForceMode2D.Impulse);
 
-        Destroy(gameObject);
+            Destroy(gameObject);
+        }
+        else
+        {
+            GameObject explocionEnemy = (GameObject)Instantiate(explocion);
+            explocionEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            explocionEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+
+            Destroy(gameObject);
+        }
+
     }
 
 }
