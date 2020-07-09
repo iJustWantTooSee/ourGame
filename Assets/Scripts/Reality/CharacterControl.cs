@@ -8,7 +8,8 @@ using UnityEngine.UIElements;
 
 public class CharacterControl : MonoBehaviour
 {
-
+    public GameObject[] Cameras;
+    public int CamerasAmount;
     public float speed;
     //public int length;
     private float moveInput;
@@ -22,6 +23,8 @@ public class CharacterControl : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        for (int i = 0; i < CamerasAmount; i++)
+            Cameras[i].SetActive(false);
     }
 
     // Update is called once per frame

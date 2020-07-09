@@ -1,0 +1,467 @@
+fileFormatVersion: 2
+guid: 1f4b384e8c486014ca7fd353f7c9c5a0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3957061249956047171
+    second: tv close up_0
+  - first:
+      213: -4743129348486425034
+    second: tv close up_1
+  - first:
+      213: -4271939560803176599
+    second: tv close up_2
+  - first:
+      213: 716126398419633454
+    second: tv close up_3
+  - first:
+      213: 6696247447348211619
+    second: tv close up_4
+  - first:
+      213: 5969679487145611619
+    second: tv close up_5
+  - first:
+      213: 6842658545164041435
+    second: tv close up_6
+  - first:
+      213: 2724798875954379828
+    second: tv close up_7
+  - first:
+      213: -3335057076550757225
+    second: tv close up_8
+  - first:
+      213: 3210491830937868225
+    second: tv close up_9
+  - first:
+      213: 6511493692290831670
+    second: tv close up_10
+  - first:
+      213: 7436004854600912975
+    second: tv close up_11
+  - first:
+      213: 79892948065840579
+    second: tv close up_12
+  - first:
+      213: 8630443477974356946
+    second: tv close up_0
+  - first:
+      213: 8084202684058250922
+    second: tv close up_1
+  - first:
+      213: 7256655996191604309
+    second: tv close up_2
+  - first:
+      213: 71588380316594650
+    second: tv close up_3
+  - first:
+      213: 7839848776310850230
+    second: tv close up_4
+  - first:
+      213: 8253998690943066819
+    second: tv close up_5
+  - first:
+      213: 5070503522565582512
+    second: tv close up_6
+  - first:
+      213: 6822587045140533197
+    second: tv close up_7
+  - first:
+      213: 5583807318625189814
+    second: tv close up_8
+  - first:
+      213: -1000289255854825378
+    second: tv close up_9
+  - first:
+      213: -2305586601980907755
+    second: tv close up_10
+  - first:
+      213: -4527151998687624872
+    second: tv close up_11
+  - first:
+      213: 6299598283572612829
+    second: tv close up_12
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 130
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tv close up_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1926
+        width: 916
+        height: 642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d39fbefd9e75c770800000000000000
+      internalID: 8630443477974356946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tv close up_1
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 1926
+        width: 916
+        height: 642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aae2d8b528bd03070800000000000000
+      internalID: 8084202684058250922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tv close up_2
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 1926
+        width: 916
+        height: 642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55e753e5e22d4b460800000000000000
+      internalID: 7256655996191604309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tv close up_3
+      rect:
+        serializedVersion: 2
+        x: 2748
+        y: 1926
+        width: 916
+        height: 642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1f0daa0455ef000800000000000000
+      internalID: 71588380316594650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tv close up_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1284
+        width: 916
+        height: 642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b20accbcecbccc60800000000000000
+      internalID: 7839848776310850230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tv close up_5
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 1284
+        width: 916
+        height: 642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2633ee3181c8270800000000000000
+      internalID: 8253998690943066819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tv close up_6
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 1284
+        width: 916
+        height: 642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0be63eec61c0e5640800000000000000
+      internalID: 5070503522565582512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tv close up_7
+      rect:
+        serializedVersion: 2
+        x: 2748
+        y: 1284
+        width: 916
+        height: 642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf88ca15c2beae50800000000000000
+      internalID: 6822587045140533197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tv close up_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 642
+        width: 916
+        height: 642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf71e80c2bad7d40800000000000000
+      internalID: 5583807318625189814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tv close up_9
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 642
+        width: 916
+        height: 642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e502228b8324e12f0800000000000000
+      internalID: -1000289255854825378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tv close up_10
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 642
+        width: 916
+        height: 642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f27067339e000e0800000000000000
+      internalID: -2305586601980907755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tv close up_11
+      rect:
+        serializedVersion: 2
+        x: 2748
+        y: 642
+        width: 916
+        height: 642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 851460a3e335c21c0800000000000000
+      internalID: -4527151998687624872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tv close up_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 916
+        height: 642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde8100234bac6750800000000000000
+      internalID: 6299598283572612829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

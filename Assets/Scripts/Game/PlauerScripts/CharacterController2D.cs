@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class CharacterController2D : MonoBehaviour
 {
+	//звук при смерти (просто добавила две строки ничего не меняла клянусь)
+	public AudioSource DeathSound;
+
 	[SerializeField] private float m_JumpForce = 400f;  // Amount of force added when the player jumps.
 	[SerializeField] private float jumpHit = 700f;  //прыжок при ударе
 	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;          // Amount of maxSpeed applied to crouching movement. 1 = 100%
@@ -180,26 +183,27 @@ public class CharacterController2D : MonoBehaviour
             }
             else
             {
+				DeathSound.Play();
 				GameObject explocionPlayer = (GameObject)Instantiate(explocionHero);
 				explocionPlayer.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
 				gameObject.GetComponent<Collider2D>().enabled = false;
 				gameObject.GetComponent<Renderer>().enabled = false;
 			
-
-				Invoke("ReloadScence", 0.5f);
+				Invoke("ReloadScence", 1.4f);
 			}
 			
 		}
 		if (other.tag == "Spines"|| other.tag == "MyxaDeath" || other.tag == "ej" || other.tag == "BossEj")
 		{
+			DeathSound.Play();
 			GameObject explocionPlayer = (GameObject)Instantiate(explocionHero);
 			explocionPlayer.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
 			gameObject.GetComponent<Collider2D>().enabled = false;
 			gameObject.GetComponent<Renderer>().enabled = false;
 
-			Invoke("ReloadScence", 0.5f);
+			Invoke("ReloadScence", 1.4f);
 
 		}
 
