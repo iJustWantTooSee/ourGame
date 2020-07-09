@@ -22,10 +22,10 @@ public class PlauerCombat : MonoBehaviour
     {
         if (Time.time >= nextAttakTime)
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0))
             {
                 Attak();
-                nextAttakTime = Time.time + 0.75f / attakRate;
+                nextAttakTime = Time.time + 0.5f / attakRate;
             }
         }
         
