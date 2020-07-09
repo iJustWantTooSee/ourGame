@@ -1,19 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Runtime.Serialization;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WatchTV : MonoBehaviour
 {
+    public Text[] texts;
+    public int size;
+    private string line;
+    private bool lineisended = true, coroutineRunning = false;
+    public GameObject textAndBack;
+
+
     public GameObject objectCloseUp;
     public GameObject hint;
     public GameObject dialogField;
     private GameObject Character;
     private bool ObjectIsOn = false, ObjectEnded = false, dialogFlag = false;
     private int i = 0, length = 200;
+    private int j = 0; 
 
     // Start is called before the first frame update
     void Start()
     {
+        textAndBack.SetActive(false);
+        for (int k = 0; k < size; k++)
         Character = GameObject.FindGameObjectWithTag("Player");
         objectCloseUp.SetActive(false);
         hint.SetActive(false);
@@ -38,15 +51,47 @@ public class WatchTV : MonoBehaviour
         }
         else if (ObjectIsOn)
         {
+            if (j < size)
+            {
+                if (lineisended && !coroutineRunning)
+                {
+                    lineisended = false;
+                    line = texts[j].text;
+                    texts[j].text = "";
+                    coroutineRunning = true;
+                    StartCoroutine("PlayText");
+                }
+            }
             if (Input.GetKeyDown(KeyCode.F))
             {
-                Character.GetComponent<CharacterControl>().isInDialog = false;
-                objectCloseUp.SetActive(false);
-                ObjectIsOn = false;
-                ObjectEnded = true;
+                if (j<size)
+                {
+                    if (lineisended)
+                    {
+                        j++;
+                    }
+                }
+                else
+                {
+                    Character.GetComponent<CharacterControl>().isInDialog = false;
+                    objectCloseUp.SetActive(false);
+                    ObjectIsOn = false;
+                    ObjectEnded = true;
+                }
             }
 
         }
+    }
+
+    IEnumerator PlayText()
+    {
+        foreach (char c in line)
+        {
+            texts[j].text += c;
+            yield return new WaitForSeconds(0.125f);
+        }
+        coroutineRunning = false;
+        lineisended = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -79,6 +124,7 @@ public class WatchTV : MonoBehaviour
                             Character.GetComponent<CharacterControl>().Flip();
                         ObjectIsOn = true;
                         objectCloseUp.SetActive(true);
+                        textAndBack.SetActive(true);
                     }
                 }
             }
