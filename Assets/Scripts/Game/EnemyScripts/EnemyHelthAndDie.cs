@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class EnemyHelthAndDie : MonoBehaviour
 {
+    //звук смерти врага
+    private AudioSource EnemyDeathSound;
+    //звук удара ежа
+    private AudioSource EjHit;
+
+    //звук удара босса ежа
+    private AudioSource BossEjHit;
+
     public int maxHelth = 100;
     int currentHelth;
     private UnityEngine.Object explocion;
@@ -11,6 +19,9 @@ public class EnemyHelthAndDie : MonoBehaviour
 
     void Start()
     {
+        EnemyDeathSound = GameObject.FindGameObjectWithTag("EnemyDeathSound").GetComponent<AudioSource>();
+        EjHit = GameObject.FindGameObjectWithTag("EjHitSound").GetComponent<AudioSource>();
+        BossEjHit = GameObject.FindGameObjectWithTag("BossEjHitSound").GetComponent<AudioSource>();
         currentHelth = maxHelth;
         explocion = Resources.Load("Explosion");
         explocionEj = Resources.Load("BossEjDeath");
@@ -20,6 +31,7 @@ public class EnemyHelthAndDie : MonoBehaviour
     {
         currentHelth -= damage;
 
+
         if (currentHelth <= 0)
         {
             Die();
@@ -28,12 +40,14 @@ public class EnemyHelthAndDie : MonoBehaviour
         {
             if (tag == "BossEj")
             {
+                BossEjHit.Play();
                 GameObject explocionEnemy = (GameObject)Instantiate(explocionEj);
                 explocionEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                 gameObject.GetComponent<Rigidbody2D>().AddForce(transform.right * 40f, ForceMode2D.Impulse);
             }
             else
             {
+                EjHit.Play();
                 GameObject explocionEnemy = (GameObject)Instantiate(explocion);
                 explocionEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                 gameObject.GetComponent<Rigidbody2D>().AddForce(transform.right * 40f, ForceMode2D.Impulse);
@@ -46,6 +60,7 @@ public class EnemyHelthAndDie : MonoBehaviour
     {
         if (tag == "BossEj")
         {
+
             GameObject explocionEnemy = (GameObject)Instantiate(explocionEj);
             explocionEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             gameObject.GetComponent<Rigidbody2D>().AddForce(transform.right * 40f, ForceMode2D.Impulse);
@@ -54,6 +69,7 @@ public class EnemyHelthAndDie : MonoBehaviour
         }
         else
         {
+            EnemyDeathSound.Play();
             GameObject explocionEnemy = (GameObject)Instantiate(explocion);
             explocionEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             explocionEnemy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);

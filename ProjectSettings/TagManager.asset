@@ -16,6 +16,10 @@ TagManager:
   - MyxaDeath
   - ej
   - BossEj
+  - Mother
+  - EnemyDeathSound
+  - EjHitSound
+  - BossEjHitSound
   layers:
   - Default
   - TransparentFX
