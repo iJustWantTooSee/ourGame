@@ -414,6 +414,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5820167390536325817, guid: f3eb4751fb2e60147adabfc229fa7440,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820167390536325817, guid: f3eb4751fb2e60147adabfc229fa7440,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.035
+      objectReference: {fileID: 0}
     - target: {fileID: 5820167390670396421, guid: f3eb4751fb2e60147adabfc229fa7440,
         type: 3}
       propertyPath: HitSound

@@ -25,7 +25,7 @@ public class PlauerCombat : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.Mouse0))
             {
                 Attak();
-                nextAttakTime = Time.time + 1f / attakRate;
+                nextAttakTime = Time.time + 0.75f / attakRate;
             }
         }
         
