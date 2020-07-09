@@ -188,9 +188,10 @@ public class CharacterController2D : MonoBehaviour
 				explocionPlayer.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
 				gameObject.GetComponent<Collider2D>().enabled = false;
+				gameObject.GetComponent<Rigidbody2D>().drag = 10000000; //костль. ≈сли умирает его вес становитс€ равен этому. » он не может шевелитьс€
 				gameObject.GetComponent<Renderer>().enabled = false;
 			
-				Invoke("ReloadScence", 1.4f);
+				Invoke("ReloadScence", 0.8f);
 			}
 			
 		}
@@ -201,9 +202,10 @@ public class CharacterController2D : MonoBehaviour
 			explocionPlayer.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
 			gameObject.GetComponent<Collider2D>().enabled = false;
+			gameObject.GetComponent<Rigidbody2D>().drag = 10000000; //костль. ≈сли умирает его вес становитс€ равен этому. » он не может шевелитьс€
 			gameObject.GetComponent<Renderer>().enabled = false;
 
-			Invoke("ReloadScence", 1.4f);
+			Invoke("ReloadScence", 0.8f);
 
 		}
 
