@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class WatchTV : MonoBehaviour
 {
-    public GameObject TV;
+    public GameObject objectCloseUp;
     public GameObject hint;
     public GameObject dialogField;
     private GameObject Character;
-    private bool TVCloseUp = false, TVended = false, dialogFlag = false;
+    private bool ObjectIsOn = false, ObjectEnded = false, dialogFlag = false;
     private int i = 0, length = 200;
 
     // Start is called before the first frame update
     void Start()
     {
         Character = GameObject.FindGameObjectWithTag("Player");
-        TV.SetActive(false);
+        objectCloseUp.SetActive(false);
         hint.SetActive(false);
     }
 
@@ -36,14 +36,14 @@ public class WatchTV : MonoBehaviour
                 dialogFlag = false;
             }
         }
-        else if (TVCloseUp)
+        else if (ObjectIsOn)
         {
-            if (Input.GetKeyDown(KeyCode.J))
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 Character.GetComponent<CharacterControl>().isInDialog = false;
-                TV.SetActive(false);
-                TVCloseUp = false;
-                TVended = true;
+                objectCloseUp.SetActive(false);
+                ObjectIsOn = false;
+                ObjectEnded = true;
             }
 
         }
@@ -63,9 +63,9 @@ public class WatchTV : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if (!TVCloseUp)
+                if (!ObjectIsOn)
                 {
-                    if (TVended)
+                    if (ObjectEnded)
                     {
                         dialogField.SetActive(true);
                         dialogFlag = true;
@@ -77,8 +77,8 @@ public class WatchTV : MonoBehaviour
                         Character.GetComponent<CharacterAnimation>().anim.SetBool("isWalking", false);
                         if (!Character.GetComponent<CharacterControl>().facingRight)
                             Character.GetComponent<CharacterControl>().Flip();
-                        TVCloseUp = true;
-                        TV.SetActive(true);
+                        ObjectIsOn = true;
+                        objectCloseUp.SetActive(true);
                     }
                 }
             }
