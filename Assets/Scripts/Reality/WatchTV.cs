@@ -7,11 +7,13 @@ using UnityEngine.UI;
 
 public class WatchTV : MonoBehaviour
 {
-    public Text[] texts;
+    public Text texts;
+    public string[] lines;
     public int size;
     private string line;
-    private bool lineisended = true, coroutineRunning = false;
-    public GameObject textAndBack;
+    private bool startNext = false, coroutineRunning = false;
+    public GameObject placeForText;
+    public GameObject afterDialog;
 
 
     public GameObject objectCloseUp;
@@ -25,7 +27,8 @@ public class WatchTV : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        textAndBack.SetActive(false);
+        afterDialog.SetActive(false);
+        placeForText.SetActive(false);
         for (int k = 0; k < size; k++)
         Character = GameObject.FindGameObjectWithTag("Player");
         objectCloseUp.SetActive(false);
@@ -53,12 +56,10 @@ public class WatchTV : MonoBehaviour
         {
             if (j < size)
             {
-                if (lineisended && !coroutineRunning)
+                if (!startNext && !coroutineRunning)
                 {
-                    lineisended = false;
-                    line = texts[j].text;
-                    texts[j].text = "";
-                    coroutineRunning = true;
+                    //line = texts.text;
+                    texts.text = "";
                     StartCoroutine("PlayText");
                 }
             }
@@ -66,17 +67,29 @@ public class WatchTV : MonoBehaviour
             {
                 if (j<size)
                 {
-                    if (lineisended)
+                    if (startNext)
                     {
+                        startNext = false;
                         j++;
                     }
                 }
                 else
                 {
-                    Character.GetComponent<CharacterControl>().isInDialog = false;
-                    objectCloseUp.SetActive(false);
-                    ObjectIsOn = false;
-                    ObjectEnded = true;
+                    if (j == size)
+                    {
+                        objectCloseUp.SetActive(false);
+                        placeForText.SetActive(false);
+                        afterDialog.transform.position = new Vector3(Character.transform.position.x + 1.5f, Character.transform.position.y + 3.4f, 0);
+                        afterDialog.SetActive(true);
+                        j++;
+                    }
+                    else
+                    {
+                        afterDialog.SetActive(false);
+                        Character.GetComponent<CharacterControl>().isInDialog = false;
+                        ObjectIsOn = false;
+                        ObjectEnded = true;
+                    }
                 }
             }
 
@@ -85,13 +98,14 @@ public class WatchTV : MonoBehaviour
 
     IEnumerator PlayText()
     {
-        foreach (char c in line)
+        coroutineRunning = true;
+        foreach (char c in lines[j])
         {
-            texts[j].text += c;
-            yield return new WaitForSeconds(0.125f);
+            texts.text += c;
+            yield return new WaitForSeconds(0.065f);
         }
         coroutineRunning = false;
-        lineisended = true;
+        startNext = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -120,11 +134,9 @@ public class WatchTV : MonoBehaviour
                         hint.SetActive(false);
                         Character.GetComponent<CharacterControl>().isInDialog = true;
                         Character.GetComponent<CharacterAnimation>().anim.SetBool("isWalking", false);
-                        if (!Character.GetComponent<CharacterControl>().facingRight)
-                            Character.GetComponent<CharacterControl>().Flip();
                         ObjectIsOn = true;
                         objectCloseUp.SetActive(true);
-                        textAndBack.SetActive(true);
+                        placeForText.SetActive(true);
                     }
                 }
             }

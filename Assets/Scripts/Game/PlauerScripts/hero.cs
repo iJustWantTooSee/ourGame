@@ -16,6 +16,8 @@ public class hero : MonoBehaviour
 	bool jump = false;
 	bool crouch = false;
 
+	public bool isInCutscene = false;
+
 	// Update is called once per frame
 	void Update()
 	{
@@ -65,8 +67,11 @@ public class hero : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		// Move our character
-		controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
-		jump = false;
+		if (!isInCutscene)
+		{
+			// Move our character
+			controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+			jump = false;
+		}
 	}
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShowDialog : MonoBehaviour
 {
+    private AudioSource Hum;
     private int i;
     public int length;
     public GameObject dialogField;
@@ -13,6 +14,7 @@ public class ShowDialog : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Hum = GameObject.FindGameObjectWithTag("HumSound").GetComponent<AudioSource>();
         Character = GameObject.FindGameObjectWithTag("Player");
         dialogField.SetActive(false);
         hint.SetActive(false);
@@ -53,6 +55,7 @@ public class ShowDialog : MonoBehaviour
             {
                 dialogFlag = true;
                 dialogField.SetActive(true);
+                Hum.Play();
             }
         }
     }
