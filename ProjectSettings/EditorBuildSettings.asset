@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FourLVL.unity
     guid: e42b9d6332cb4e54284a5aa571ac3f06
+  - enabled: 1
+    path: Assets/Scenes/EndOfDemo.unity
+    guid: f07c6af9791ef3f40954f9b83ad5532f
   m_configObjects: {}

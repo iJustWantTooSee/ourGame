@@ -532,7 +532,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 45360582}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 461.90958, y: 125.587494, z: -14.1104}
+  m_LocalPosition: {x: 461.93134, y: 125.58752, z: -14.1104}
   m_LocalScale: {x: 0.99580646, y: 0.99580646, z: 0.99580646}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5468,7 +5468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawPos: {fileID: 807807469}
   Coner: {fileID: 7594166026503250993, guid: e4ffbc0d3a483364ebe5c801c02c9258, type: 3}
-  RangeCorner: 25
+  RangeCorner: 20
   TimeSpawn: 0.75
 --- !u!4 &807807469
 Transform:
@@ -6223,7 +6223,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 936564989}
-  - component: {fileID: 936564991}
   - component: {fileID: 936564990}
   m_Layer: 0
   m_Name: Input
@@ -6274,19 +6273,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.21, y: 85.43}
   m_EdgeRadius: 0
---- !u!114 &936564991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 936564988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d22ed21791b1e74fbd43dcd90a0cfac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneToLoad: SecondLVL
 --- !u!1 &946802609
 GameObject:
   m_ObjectHideFlags: 0
@@ -11587,7 +11573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawPos: {fileID: 1593147479}
   Coner: {fileID: 7594166026503250993, guid: e4ffbc0d3a483364ebe5c801c02c9258, type: 3}
-  RangeCorner: 20
+  RangeCorner: 18
   TimeSpawn: 0.5
 --- !u!4 &1593147479
 Transform:
