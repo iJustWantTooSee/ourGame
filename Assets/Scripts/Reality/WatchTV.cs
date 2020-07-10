@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class WatchTV : MonoBehaviour
 {
+    public AudioSource Noise;
     public Text texts;
     public string[] lines;
     public int size;
@@ -81,6 +82,7 @@ public class WatchTV : MonoBehaviour
                         afterDialog.transform.position = new Vector3(Character.transform.position.x + 1.5f, Character.transform.position.y + 3.4f, 0);
                         afterDialog.SetActive(true);
                         j++;
+                        Noise.Stop();
                     }
                     else
                     {
@@ -134,8 +136,11 @@ public class WatchTV : MonoBehaviour
                         Character.GetComponent<CharacterControl>().isInDialog = true;
                         Character.GetComponent<CharacterAnimation>().anim.SetBool("isWalking", false);
                         ObjectIsOn = true;
+                        Noise.Play();
                         objectCloseUp.SetActive(true);
                         placeForText.SetActive(true);
+                        if (Character.GetComponent<CharacterControl>().footsteps.isPlaying)
+                            Character.GetComponent<CharacterControl>().footsteps.Stop();
                     }
                 }
             }

@@ -35,7 +35,7 @@ public class CharacterControl : MonoBehaviour
         if (!isInDialog)
         {
             moveInput = Input.GetAxis("Horizontal");
-            if (moveInput != 0)
+            if (moveInput != 0 && Time.timeScale!=0f)
             {
                 if (!footsteps.isPlaying)
                     footsteps.Play();
