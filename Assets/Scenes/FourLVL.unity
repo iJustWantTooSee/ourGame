@@ -758,6 +758,11 @@ PrefabInstance:
       propertyPath: DeathSound
       value: 
       objectReference: {fileID: 234001730}
+    - target: {fileID: 5820167390670396429, guid: f3eb4751fb2e60147adabfc229fa7440,
+        type: 3}
+      propertyPath: NumberScence
+      value: FourLVL
+      objectReference: {fileID: 0}
     - target: {fileID: 5820167390670396434, guid: f3eb4751fb2e60147adabfc229fa7440,
         type: 3}
       propertyPath: m_Name
