@@ -10,7 +10,6 @@ public class WatchTV : MonoBehaviour
     public Text texts;
     public string[] lines;
     public int size;
-    private string line;
     private bool startNext = false, coroutineRunning = false;
     public GameObject placeForText;
     public GameObject afterDialog;

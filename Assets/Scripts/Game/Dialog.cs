@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Cutscene : MonoBehaviour
+public class Dialog : MonoBehaviour
 {
     // Start is called before the first frame update
     // Update is called once per frame
 
-
+    public GameObject Wall;
     private GameObject Character;
     private bool startNext = false, coroutineRunning = false, cutsceneStarted = false;
     public Text texts;
@@ -51,7 +51,7 @@ public class Cutscene : MonoBehaviour
                     placeForText.SetActive(false);
                     cutsceneStarted = false;
                     Character.GetComponent<hero>().isInCutscene = false;
-                    SceneManager.LoadScene("gameInGameFirstLVL");
+                    Wall.SetActive(false);
                 }
             }
         }
@@ -71,9 +71,12 @@ public class Cutscene : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       Character.GetComponent<hero>().isInCutscene = true;
-        cutsceneStarted = true;
-        StartCoroutine(Waiting());
+        if (collision.tag == "Player")
+        {
+            Character.GetComponent<hero>().isInCutscene = true;
+            cutsceneStarted = true;
+            StartCoroutine(Waiting());
+        }
     }
     IEnumerator Waiting()
     {
