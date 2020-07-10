@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndOfDemo.unity
     guid: f07c6af9791ef3f40954f9b83ad5532f
+  - enabled: 1
+    path: Assets/Scenes/LVL1CUTSCENE.unity
+    guid: fb1f63a787563814db0c0e725bf06162
+  - enabled: 1
+    path: Assets/Scenes/MomIsHome.unity
+    guid: 0354f46b134b99f44a952144dd1f9d72
   m_configObjects: {}
