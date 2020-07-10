@@ -18,6 +18,7 @@ public class Dialog : MonoBehaviour
     private int j = 0;
     public GameObject placeForText;
 
+
     private void Start()
     {
         placeForText.SetActive(false);
@@ -48,10 +49,11 @@ public class Dialog : MonoBehaviour
                 }
                 else
                 {
+                    Destroy(Wall);
+                    Destroy(this);
                     placeForText.SetActive(false);
                     cutsceneStarted = false;
                     Character.GetComponent<hero>().isInCutscene = false;
-                    Wall.SetActive(false);
                 }
             }
         }

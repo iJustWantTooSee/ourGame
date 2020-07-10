@@ -2003,6 +2003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce4db3cc8c088d4d84bf55c02ef13cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneToLoad: gameInGameFirstLVL
   texts: {fileID: 1064483947}
   lines:
   - . . .
