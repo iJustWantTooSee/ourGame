@@ -9,6 +9,7 @@ public class Cutscene : MonoBehaviour
     // Start is called before the first frame update
     // Update is called once per frame
 
+    public string sceneToLoad;
 
     private GameObject Character;
     private bool startNext = false, coroutineRunning = false, cutsceneStarted = false;
@@ -51,7 +52,7 @@ public class Cutscene : MonoBehaviour
                     placeForText.SetActive(false);
                     cutsceneStarted = false;
                     Character.GetComponent<hero>().isInCutscene = false;
-                    SceneManager.LoadScene("gameInGameFirstLVL");
+                    SceneManager.LoadScene(sceneToLoad);
                 }
             }
         }
@@ -71,7 +72,7 @@ public class Cutscene : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       Character.GetComponent<hero>().isInCutscene = true;
+        Character.GetComponent<hero>().isInCutscene = true;
         cutsceneStarted = true;
         StartCoroutine(Waiting());
     }
