@@ -196,7 +196,7 @@ public class CharacterController2D : MonoBehaviour
 				gameObject.GetComponent<Rigidbody2D>().drag = 10000000; //костль. ≈сли умирает его вес становитс€ равен этому. » он не может шевелитьс€
 				gameObject.GetComponent<Renderer>().enabled = false;
 			
-				Invoke("ReloadScence", 0.8f);
+				Invoke("ReloadScence", 1f);
 			}
 			
 		}
@@ -210,7 +210,7 @@ public class CharacterController2D : MonoBehaviour
 			gameObject.GetComponent<Rigidbody2D>().drag = 10000000; //костль. ≈сли умирает его вес становитс€ равен этому. » он не может шевелитьс€
 			gameObject.GetComponent<Renderer>().enabled = false;
 
-			Invoke("ReloadScence", 0.8f);
+			Invoke("ReloadScence", 1f);
 
 		}
 

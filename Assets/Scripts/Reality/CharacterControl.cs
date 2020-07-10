@@ -9,6 +9,7 @@ using UnityEngine.UIElements;
 public class CharacterControl : MonoBehaviour
 {
     public GameObject[] Cameras;
+    public AudioSource footsteps;
     public int CamerasAmount;
     public float speed;
     //public int length;
@@ -25,6 +26,7 @@ public class CharacterControl : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         for (int i = 0; i < CamerasAmount; i++)
             Cameras[i].SetActive(false);
+        footsteps = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -33,6 +35,16 @@ public class CharacterControl : MonoBehaviour
         if (!isInDialog)
         {
             moveInput = Input.GetAxis("Horizontal");
+            if (moveInput != 0)
+            {
+                if (!footsteps.isPlaying)
+                    footsteps.Play();
+            }
+            else
+            {
+                if (footsteps.isPlaying)
+                    footsteps.Stop();
+            }
             rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
             if (!facingRight && moveInput > 0)
             {
