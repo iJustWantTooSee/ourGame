@@ -7,6 +7,9 @@ public class CharacterController2D : MonoBehaviour
 	//звук при смерти (просто добавила две строки ничего не мен€ла кл€нусь)
 	public AudioSource DeathSound;
 
+	//звук смерти врага
+	private AudioSource EnemyDeathSound;
+
 	[SerializeField] private float m_JumpForce = 400f;  // Amount of force added when the player jumps.
 	[SerializeField] private float jumpHit = 700f;  //прыжок при ударе
 	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;          // Amount of maxSpeed applied to crouching movement. 1 = 100%
@@ -41,6 +44,7 @@ public class CharacterController2D : MonoBehaviour
 
 	private void Awake()
 	{
+		EnemyDeathSound = GameObject.FindGameObjectWithTag("EnemyDeathSound").GetComponent<AudioSource>();
 		explocion = Resources.Load("Explosion");  // ≈сли что удалить это 
 		explocionHero = Resources.Load("HeroExplosion");
 
@@ -176,6 +180,7 @@ public class CharacterController2D : MonoBehaviour
 					cheakHitJump = true;
 				}
 
+				EnemyDeathSound.Play();
 				GameObject explocionEnemy = (GameObject)Instantiate(explocion);
 				explocionEnemy.transform.position = new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z);
 

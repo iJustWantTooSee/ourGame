@@ -2081,7 +2081,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 470152111}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.6700001, z: 0}
+  m_LocalPosition: {x: -3.23, y: -0.6700001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 653231621}
@@ -8542,9 +8542,9 @@ MonoBehaviour:
   lines:
   - ...The voting was conducted flawlessly, without any problems or irregularities.
   - According to the Central Election Commission, the results are meeting our
-  - previous expectations. Our president will keep his position solidly until next
-    Election.
-  - The president announced that today will be declared a national holiday
+  - previous expectations. Our President will keep his position solidly until next
+    election.
+  - The President announced that today will be declared a national holiday
   - 'as a symbol of another political victory. To other news:'
   - the protests against police brutality in the capital keep getting more violent...
   size: 6

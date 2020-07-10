@@ -64,7 +64,7 @@ public class StartGame : MonoBehaviour
                     }
                     else
                     {
-                       SceneManager.LoadScene("gameInGameFirstLVL");
+                       SceneManager.LoadScene("ThirdLVL");
                     }
                 }
             }
