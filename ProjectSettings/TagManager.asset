@@ -20,6 +20,7 @@ TagManager:
   - EnemyDeathSound
   - EjHitSound
   - BossEjHitSound
+  - HumSound
   layers:
   - Default
   - TransparentFX

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour
 {
+    private AudioSource Hum;
     private bool dialogFlag = false;
     public int length;
     public GameObject dialogField;
@@ -14,6 +15,7 @@ public class StartGame : MonoBehaviour
 
     private void Start()
     {
+        Hum = GameObject.FindGameObjectWithTag("HumSound").GetComponent<AudioSource>();
         Character = GameObject.FindGameObjectWithTag("Mother");
         Player = GameObject.FindGameObjectWithTag("Player");
         dialogField.SetActive(false);
@@ -58,6 +60,7 @@ public class StartGame : MonoBehaviour
                     {
                         dialogFlag = true;
                         dialogField.SetActive(true);
+                        Hum.Play();
                     }
                     else
                     {
