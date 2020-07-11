@@ -6961,6 +6961,11 @@ PrefabInstance:
       propertyPath: JumpingSound
       value: 
       objectReference: {fileID: 1436065242}
+    - target: {fileID: 5820167390670396428, guid: f3eb4751fb2e60147adabfc229fa7440,
+        type: 3}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 1842342935}
     - target: {fileID: 5820167390670396429, guid: f3eb4751fb2e60147adabfc229fa7440,
         type: 3}
       propertyPath: NumberScence
@@ -17699,6 +17704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53e2522caff96654c80300b1d8b62bed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameIsPaused: 0
   pauseMenu: {fileID: 1129155591}
 --- !u!82 &1842342944
 AudioSource:

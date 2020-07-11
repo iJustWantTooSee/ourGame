@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlauerCombat : MonoBehaviour
 {
 
+    public hero Hero;
+    public PauseMenu pauseMenu;
+
     public Animator animator;
     public AudioSource HitSound;
     public Transform attakPoint;
@@ -16,7 +19,12 @@ public class PlauerCombat : MonoBehaviour
     public float attakRate = 2f;
     float nextAttakTime = 0f;
 
-    
+    private void Start()
+    {
+        Hero = GetComponent<hero>();
+        pauseMenu = GetComponent<PauseMenu>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -24,8 +32,11 @@ public class PlauerCombat : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0))
             {
-                Attak();
-                nextAttakTime = Time.time + 0.5f / attakRate;
+                if (!Hero.isInCutscene && !pauseMenu.GameIsPaused)
+                {
+                    Attak();
+                    nextAttakTime = Time.time + 0.5f / attakRate;
+                }
             }
         }
         

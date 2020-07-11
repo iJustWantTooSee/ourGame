@@ -5,7 +5,8 @@ using UnityEngine;
 public class CharacterAnimation : MonoBehaviour
 {
     public Animator anim;
-    
+    public PauseMenu pause;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,7 @@ public class CharacterAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!this.GetComponent<CharacterControl>().isInDialog)
+        if (!this.GetComponent<CharacterControl>().isInDialog && !pause.GameIsPaused)
         {
             if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
             {

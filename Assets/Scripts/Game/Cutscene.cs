@@ -72,9 +72,22 @@ public class Cutscene : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        MuteAudio();
         Character.GetComponent<hero>().isInCutscene = true;
         cutsceneStarted = true;
         StartCoroutine(Waiting());
+    }
+    private void MuteAudio()
+    {
+        if (Character.GetComponent<hero>().FootstepsSound.isPlaying)
+            Character.GetComponent<hero>().FootstepsSound.Stop();
+        if (Character.GetComponent<hero>().CrouchingSound.isPlaying)
+            Character.GetComponent<hero>().CrouchingSound.Stop();
+        if (Character.GetComponent<hero>().JumpingSound.isPlaying)
+            Character.GetComponent<hero>().JumpingSound.Stop();
+        Character.GetComponent<hero>().animator.SetBool("IsJumping", false);
+        Character.GetComponent<hero>().animator.SetBool("IsCrouching", false);
+        Character.GetComponent<hero>().animator.SetFloat("Speed", 0f);
     }
     IEnumerator Waiting()
     {

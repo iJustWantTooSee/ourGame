@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class hero : MonoBehaviour
 {
+	public PauseMenu pause;
 	public AudioSource FootstepsSound, CrouchingSound, JumpingSound;
 	public CharacterController2D controller;
 	public Animator animator;
@@ -21,37 +22,38 @@ public class hero : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		if (!pause.GameIsPaused && !isInCutscene)
+		{
+			horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+			if (Mathf.Abs(horizontalMove) > 0.01 && !crouch)
+			{
+				if (!FootstepsSound.isPlaying)
+					FootstepsSound.Play();
+			}
+			else
+				FootstepsSound.Stop();
+			animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-		if (Mathf.Abs(horizontalMove) > 0.01 && !crouch)
-		{
-			if (!FootstepsSound.isPlaying)
-				FootstepsSound.Play();
-		}
-		else
-			FootstepsSound.Stop();
-		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+			if (Input.GetButtonDown("Jump"))
+			{
+				jump = true;
+				animator.SetBool("IsJumping", true);
+				if (!JumpingSound.isPlaying)
+					JumpingSound.Play();
+			}
 
-		if (Input.GetButtonDown("Jump"))
-		{
-			jump = true;
-			animator.SetBool("IsJumping", true);
-			if (!JumpingSound.isPlaying)
-				JumpingSound.Play();
+			if (Input.GetButtonDown("Crouch"))
+			{
+				crouch = true;
+				if (!CrouchingSound)
+					CrouchingSound.Play();
+			}
+			else if (Input.GetButtonUp("Crouch"))
+			{
+				crouch = false;
+				CrouchingSound.Stop();
+			}
 		}
-
-		if (Input.GetButtonDown("Crouch"))
-		{
-			crouch = true;
-			if (!CrouchingSound)
-				CrouchingSound.Play();
-		}
-		else if (Input.GetButtonUp("Crouch"))
-		{
-			crouch = false;
-			CrouchingSound.Stop();
-		}
-	
 	}
 
 	public void OnLanding()

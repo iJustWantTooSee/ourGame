@@ -532,7 +532,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 45360582}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 461.90958, y: 125.587494, z: -14.1104}
+  m_LocalPosition: {x: 461.93134, y: 125.58752, z: -14.1104}
   m_LocalScale: {x: 0.99580646, y: 0.99580646, z: 0.99580646}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1436,6 +1436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53e2522caff96654c80300b1d8b62bed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameIsPaused: 0
   pauseMenu: {fileID: 1136248856}
 --- !u!1 &246884465
 GameObject:
@@ -5968,6 +5969,11 @@ PrefabInstance:
       propertyPath: runSpeed
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5820167390670396428, guid: f3eb4751fb2e60147adabfc229fa7440,
+        type: 3}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 242172372}
     - target: {fileID: 5820167390670396429, guid: f3eb4751fb2e60147adabfc229fa7440,
         type: 3}
       propertyPath: m_JumpForce
